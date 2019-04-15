@@ -25,7 +25,7 @@ class Matrix:
     def sumVectors(self, A, B, subtract = False):
         '''
         REQUIRES: A[n], B[n], bool subtract (default = False)
-	    MODIFIES: ---
+	MODIFIES: ---
     	EFFECT:   returns a new vector that is the sum of two vectors
                   if len(A) != len(B) an Exception is raised
         '''
@@ -36,7 +36,7 @@ class Matrix:
     def sumMatrix(self, A, B, subtract = False):
         '''
         REQUIRES: A[m][n], B[m][n], bool subtract (default = False)
-	    MODIFIES: ---
+	MODIFIES: ---
     	EFFECT:   returns a new matrix that is the sum of two matrices
                   an Exception is raised if A and B have different dimensions
         '''
@@ -50,7 +50,7 @@ class Matrix:
     def sumVectorEntries(self, V):
         '''
         REQUIRES: V[n]
-	    MODIFIES: ---
+	MODIFIES: ---
     	EFFECT:   returns the sum of all items
                   sum = V[0] + V[1] + ... + V[n]
         '''
@@ -59,7 +59,7 @@ class Matrix:
     def multiplyScalarVector(self, V, y, divide = False):
         '''
         REQUIRES: V[n], float y, bool divide (default = False)
-	    MODIFIES: ---
+	MODIFIES: ---
     	EFFECT:   returns the resulting multiplication / division of a vector with a scalar
         '''
         return [1 / y * V[i] if divide else y * V[i] for i in range(len(V))]
@@ -67,7 +67,7 @@ class Matrix:
     def multiplyScalarMatrix(self, M, y, divide = False):
         '''
         REQUIRES: M[m][n], float y, bool divide
-	    MODIFIES: ---
+	MODIFIES: ---
     	EFFECT:   returns a new matrix that is the result
                   of the multiplication of a matrix with a scalar
         '''
@@ -79,7 +79,7 @@ class Matrix:
     def multiplyVectors(self, A, B, A_vertical = False):
         '''
         REQUIRES: A[n], B[n], bool A_vertical (default = False)
-	    MODIFIES: ---
+	MODIFIES: ---
     	EFFECT:   returns the result of the multiplication
                   of a vector with another vector, checking if the first is a
                   vertical vector (by default False)
@@ -100,8 +100,8 @@ class Matrix:
         '''
         IMPORTANT: matrix rows must be equal to vector length
 	               in case of division vector must NOT contain 0 (zeros) 
-	    REQUIRES:  M[m][n], V[n], bool divide (default = False)
-	    MODIFIES:  ---
+	REQUIRES:  M[m][n], V[n], bool divide (default = False)
+	MODIFIES:  ---
     	EFFECT:    returns a new vector that is the result of the
                    multiplication of a vector with a matrix
         '''
@@ -225,3 +225,5 @@ class Matrix:
         elif column >= len(M[0]):
             raise Exception('Invalid input: colums must be less than matrix columns length')
         return [[M[i][j] for j in range(len(M)) if j != column] for i in range(len(M)) if i != row]
+
+
