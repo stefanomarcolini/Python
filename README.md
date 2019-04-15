@@ -1,5 +1,5 @@
 # Python
-python classes
+Python classes:
 <hr>
 
 <ul>
