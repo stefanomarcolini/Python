@@ -4,5 +4,6 @@
 <p>This module contains the following classes</p>
 
 <ul>
-  <li>Matrix</li>
+  <li>numbers_module/Numbers</li>
+  <li>calculator_module/Calculator</li>
 </ul>
